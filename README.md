@@ -4,7 +4,7 @@
 ## Usage
 ```
 // After git this code & change directory to folder script
-php run.php
+php delete_dm.php
 ```
   - `Username`: A `Your Username IG`
   - `Password`: A `Your Password IG`

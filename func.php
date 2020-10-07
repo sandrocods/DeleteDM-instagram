@@ -443,3 +443,16 @@ function send_telegram($chatid, $msg, $bottoken)
             );
         }
  }
+
+/**
+ * Ask for input, but make it hidden.
+ */
+function ask_hidden( $prompt ) {
+	echo $prompt.": ";
+
+	echo "\033[30;40m";  // black text on black background
+	$input = fgets( STDIN );
+	echo "\033[0m";      // reset
+
+	return rtrim( $input, "\n" );
+}

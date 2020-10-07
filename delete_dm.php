@@ -3,7 +3,6 @@
  * Author  : Sandroputraa
  * Name    : Instagram Auto Delete Direct
  * Build   : 06 October 2020
- * Update  : 07 October 2020
  * 
  * If you are a reliable programmer or the best developer, please don't change anything.
  * If you want to be appreciated by others, then don't change anything in this script.
@@ -44,7 +43,7 @@ function fetch_inbox($cursor , $cookie)
             "user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36",
             "x-ig-app-id: 936619743392459",
             "x-requested-with: XMLHttpRequest"
-          ],
+          ]
     );
     return array(
             'Cursor' => json_decode($fetch[2], true)['inbox']['oldest_cursor'],

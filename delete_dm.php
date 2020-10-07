@@ -3,6 +3,7 @@
  * Author  : Sandroputraa
  * Name    : Instagram Auto Delete Direct
  * Build   : 06 October 2020
+ * Update  : 07 October 2020
  * 
  * If you are a reliable programmer or the best developer, please don't change anything.
  * If you want to be appreciated by others, then don't change anything in this script.
@@ -87,11 +88,9 @@ function delete_inbox($thread_id , $cookie)
     return $delete[2];
 }
 
-
-
 echo warna("Don't turn on 2-factor authentication","RED")."\n";
 $username = getVarFromUser('Username');
-$password = getVarFromUser('Password');
+$password = ask_hidden('Password');
 $sleep = getVarFromUser('Sleep delete DM / Seconds');
 $cookie = curl(
     'https://www.instagram.com/data/shared_data/?__a=1',
@@ -152,7 +151,7 @@ $cookie = curl(
           if (!empty($cursor)) {
               echo "[!] Trying Get Next Page\n";
           } else {
-              echo "[!] Empty Inbox \n";
+              die("[!] Empty Inbox \n");
           }
           echo "\n\n";
           sleep(mt_rand(10,30)); // Best Sleep to fetch again
